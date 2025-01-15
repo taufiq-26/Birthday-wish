@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f953c6, #b91d73);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 10%;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .cake {
+            width: 250px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff005e;
+        }
+        .special-message {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday, Chubby Cheeks! 🎉</h1>
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Birthday Cake" class="cake" id="cake">
+        <p>Click the button below to cut the cake and reveal a special message just for you!</p>
+        <button onclick="cutCake()">Cut the Cake 🎂</button>
+        <h2 id="revealMessage" style="display: none;">🎂 Cake Cut Successfully! 🎂</h2>
+        <div id="specialMessage" class="special-message" style="display: none;">[Your Special Message]</div>
+    </div>
+
+    <script>
+        function cutCake() {
+            const cake = document.getElementById('cake');
+            const revealMessage = document.getElementById('revealMessage');
+            const specialMessage = document.getElementById('specialMessage');
+
+            // Replace the cake with a "cut" cake image
+            cake.src = "https://www.shutterstock.com/image-photo/piece-chocolate-cake-cream-on-white-2269053747"; // Cut cake image URL
+
+            // Reveal the message
+            revealMessage.style.display = "block";
+            specialMessage.style.display = "block";
+
+            // Customize the special message
+            specialMessage.innerHTML = "Dear Chubby Cheeks,Once again happy birthday. May your year ahead be as sweet as this cake and filled with endless happiness! Keep smiling, It suits you. Never be sad, I'm there for you anytime anywhere. You are a sweet person and continue being that sweet and mad person. I like it. Enjoy your life 🎉✨";
+        }
+    </script>
+</body>
+</html>
